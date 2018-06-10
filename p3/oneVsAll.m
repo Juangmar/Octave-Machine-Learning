@@ -1,0 +1,1 @@
+function [res] = oneVsAll(x,y,num_etiquetas, lambda)  m = size(x, 1);  n = size(x, 2);    X = [ones(m, 1) x];  res = zeros(num_etiquetas, n + 1);  ini = zeros(n + 1, 1);  options = optimset('GradObj', 'on', 'MaxIter', 50);   for c = 1:num_etiquetas,  [theta] = fmincg(@(t)(lrCostFunction(t, X, (y==c), lambda)), ini, options);  res(c, :) = theta'; endendfunction

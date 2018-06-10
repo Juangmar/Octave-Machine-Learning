@@ -1,0 +1,1 @@
+function a = predict(theta, X)  m = size(X, 1);  num_labels = size(theta, 1);  a = zeros(size(X, 1), 1);  X = [ones(m, 1) X];  predict = sigmoide(X*theta');  [predict_max, index_max] = max(predict, [], 2);  a = index_max;endfunction
