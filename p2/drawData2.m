@@ -1,0 +1,1 @@
+data = load('ex2data2.txt', '-ascii');y = data(:,3);x = data(:,1:2);negativos = find(y==0);positivos = find(y==1);plot(x(negativos,1),x(negativos, 2), 'ko', 'MarkerFaceColor', 'r', 'MarkerSize', 8,     x(positivos,1),x(positivos, 2), 'ko', 'MarkerFaceColor', 'g', 'MarkerSize', 8);

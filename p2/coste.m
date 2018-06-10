@@ -1,0 +1,1 @@
+function [J, grad] = coste(theta, x, y)  m = rows(y);  X = [ones(m,1), x];  J = (1/m) * ((-y)'*log(funcionSigmoide(X*theta)) - (1-y)'*log(1-funcionSigmoide(X*theta)));  grad = (1/m) * ((funcionSigmoide(X*theta) - y)' * X)';endfunction

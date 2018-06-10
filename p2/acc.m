@@ -1,0 +1,1 @@
+function a = acc(theta, x, y)	reg = funcionSigmoide(theta'*x')';  	predicciones = gt(reg,0.5);  	aciertos = sum(predicciones == y);  	a = aciertos / rows(y) * 100; endfunction
