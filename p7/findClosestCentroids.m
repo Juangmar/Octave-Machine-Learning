@@ -1,0 +1,1 @@
+function idx = findClosestCentroids(X, centroids)  % idx(m x 1) cX.ro(i) := j que minimiza ( ∥ x(i) − μj ∥ ^ 2 )  n = rows(X);  idx = zeros(n,1);    for i = 1:n      [d, ind] = min(distance(X(i,:), centroids));    idx(i) = ind;      endfor endfunction

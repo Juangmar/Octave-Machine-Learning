@@ -1,0 +1,1 @@
+function d = distance (point_one, point_two)    d = sum(((point_one .- point_two) .^2), 2);  endfunction

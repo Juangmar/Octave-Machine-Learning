@@ -1,0 +1,1 @@
+function Theta = optimizar(x,y,l)  ini = ones(columns(x),1);  costFunction = @(t) linearRegRegCost(x,y,t,l);  options = optimset('MaxIter', 50, 'GradObj', 'on');  Theta = fmincg(costFunction, ini, options);endfunction
