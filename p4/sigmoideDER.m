@@ -1,0 +1,1 @@
+function g = sigmoideDER(z)   g = sig(z) .* (1-sig(z));endfunctionfunction g = sig(z)   g = 1 ./ (1 + e.^(-z));endfunction
