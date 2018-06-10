@@ -1,0 +1,1 @@
+data = load('ex1data2.txt', '-ascii');X = normalizarAtributo(data);z = [0;0;0];res = descensoGradienteMulti(data(:,1:2),data(:,3),z, 0.001, 15000)

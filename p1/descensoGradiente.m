@@ -1,0 +1,1 @@
+function [theta] = descensoGradiente(X,y,theta,alpha,num_iters)    m = length(X);  J_history = zeros(num_iters, 1);  X = [ones(m,1),X];    for iter = 1:num_iters       delta = (theta' * X'-y')*X;       theta = theta - alpha/m*delta';       J_history(iter) = computeCost(X, y, theta);   end  endfunction

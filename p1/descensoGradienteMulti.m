@@ -1,0 +1,1 @@
+function [theta] = descensoGradienteMulti(X,y,theta,alpha,num_iters)    m = rows(y);    J_history = zeros(num_iters, 1);    X = [ones(m,1),X];    for iter = 1:num_iters       theta = theta -((1/m) * ((X * theta) - y)' * X)' * alpha;       J_history(iter) = computeCostMulti(X, y, theta);   end  endfunction

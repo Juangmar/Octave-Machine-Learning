@@ -1,0 +1,1 @@
+function c = computeCost(X,y,theta)   m = length(X);   sqr = ((X * theta) - y).^2;       c=((1/(2*m) * sum(sqr)));endfunction

@@ -1,0 +1,1 @@
+data = load('ex1data2.txt', '-ascii');[X, mu, sigma] = normalizarAtributo(data(:,1:2));z = [0;0;0];resGrad = descensoGradienteMulti(X, data(:,3), z, 0.001, 15000);theta = ecNormal(X,data(:,3));regresionLineal([1,1650,3], theta, mu, sigma)

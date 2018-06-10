@@ -1,0 +1,1 @@
+data = load('-ascii','ex1data1.txt');z = [0;0];res = descensoGradiente(data(:,1),data(:,2),z, 0.001, 1500);f = @gradientFunction;plot(data(:,1),data(:,2),".r", data(:,1), f(res(1),res(2),data(:,1)), "-");res1 = f(res(1),res(2),15000)res2 = f(res(1),res(2),75000)

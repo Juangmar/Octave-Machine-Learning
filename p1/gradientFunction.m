@@ -1,0 +1,1 @@
+function f = gradientFunction(corteY, pend, x)  f = pend.*x + corteY;   endfunction
